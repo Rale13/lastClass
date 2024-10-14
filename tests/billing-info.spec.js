@@ -23,7 +23,6 @@ test.describe("customers API tests", () => {
             cvv: 911,
             card_expiration_date: "12/24",
     });
-    console.log(response)
     expect(customerToUpdate.billing_info.cardholder).not.toBe(response.billing_info.cardholder);
   });
 });
