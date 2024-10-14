@@ -14,7 +14,7 @@ let loginPassword = password;
 
 test.describe.configure({ mode: "serial" });
 
-test.describe("register tests", async () => {
+test.describe("register tests", () => {
   test.beforeEach("visi page and validte", async ({ page }) => {
     //visit page and validate
     await page.goto(URLS["REGISTER"]);

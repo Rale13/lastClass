@@ -19,3 +19,8 @@ export const generateUserCredentials = (length) => {
     registeredPassword,
   };
 };
+
+export const VALID_LOGIN_PAYLOAD = {
+    email: generateUserCredentials().registeredEmail,
+    password: generateUserCredentials().registeredPassword,
+  };

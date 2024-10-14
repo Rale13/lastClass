@@ -8,7 +8,13 @@ const generateRandomString = (length) => {
     }
     return result;
   };
+
+  const generateRandomNumber = (max) => {
+    return Math.floor(Math.random() * (max - 1) + 1);
+  
+  };
     
   export {
     generateRandomString,
+    generateRandomNumber
   };
