@@ -15,10 +15,9 @@ test.describe("customers API tests", () => {
   });
 
   test("should be able to update a customers billing info", async () => {
-    //const cardholderName = generateRandomString();
     const customerToUpdate = await customersAPI.getCustomerBillingInfo(userId);
     const response = await customersAPI.updateCustomerBillingInfo(userId, {
-            cardholder: `New ${customerToUpdate.billing_info.cardholder}`,
+            cardholder: generateRandomString(10),
             card_type: "Visa",
             card_number: "4111111131111111",
             cvv: 911,
