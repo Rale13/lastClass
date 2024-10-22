@@ -1,4 +1,4 @@
-export class Headers {
+export class Header {
     constructor(page) {
       this.page = page;
       this.loader = "div[class='h-48 w-48']";

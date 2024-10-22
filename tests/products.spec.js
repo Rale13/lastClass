@@ -1,11 +1,11 @@
 import { test, expect } from "@playwright/test";
 import { LoginPage } from "../pom/modules/ui/loginPage";
 import { Dashboard } from "../pom/modules/ui/dashboard";
-import { Headers } from "../pom/modules/ui/headers"
+import { Header } from "../pom/modules/ui/header"
 import { generateUserCredentials } from "../fixtures/userData";
 import { URLS } from "../fixtures/pages";
 
-let dashboard, loginPage, headers, cards;
+let dashboard, loginPage, header, cards;
 const { registeredEmail, registeredPassword } = generateUserCredentials();
 
 test.describe("products tests", () => {
@@ -15,12 +15,12 @@ test.describe("products tests", () => {
     //instantiate pom's
     loginPage = new LoginPage(page);
     dashboard = new Dashboard(page);
-    headers = new Headers(page);
+    header = new Header(page);
     //log in
     loginPage.login(registeredEmail, registeredPassword);
     //assert that all elements are loaded
     await page.waitForURL(URLS["DASHBOARD"]);
-    await page.waitForSelector(headers.loader, { state: "hidden" });
+    await page.waitForSelector(header.loader, { state: "hidden" });
     cards = dashboard.productLocator;
   });
 

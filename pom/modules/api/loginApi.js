@@ -1,7 +1,7 @@
 import { BaseAPI } from "./baseApi";
 import { ENDPOINTS } from "../../../fixtures/http"
 
-export class BaseLoginAPI extends BaseAPI {
+export class LoginAPI extends BaseAPI {
     constructor(page) {
       super(page)
       this.endpoint = ENDPOINTS["LOGIN"]

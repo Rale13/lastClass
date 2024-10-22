@@ -1,7 +1,7 @@
-import { BaseAPI } from "./baseApi";
+import { BillingInfoAPI } from "./billingInfo";
 import { ENDPOINTS } from "../../../fixtures/http";
 
-export class CustomersAPI extends BaseAPI {
+export class CustomersAPI extends BillingInfoAPI {
   constructor(page, token = "") {
     super(page, token);
     this.endpoint = ENDPOINTS["CUSTOMERS"];
